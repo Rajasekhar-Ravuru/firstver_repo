@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+       <link rel="stylesheet" href="dynamic.css">
+    </head>
+    <body>
+        <div id="root"></div>
+        <script>
+            function createcard(url,name){
+                var image = React.createElement("img",{
+                    src:url,
+                    width:"300px",
+                    heigth:""
+                });
+                
+                var h2 = React.createElement("h2",null,"Nikhil varma");
+
+                var p = React.createElement("p",null,"versatile software Engineer , who can develop any type of applications");
+
+                var btn = React.createElement("button",null,"Profile Details");
+
+                let card = React.createElement("div",null,[image,h2,p,btn]);
+                return card
+            }
+
+            function createContainer(){
+                return React.createElement("div",{className:"container"},[
+                    createcard(
+                        "https://th.bing.com/th/id/OIP.voVb4NaGSepTyJ5vdixyEAHaE8?rs=1&pid=ImgDetMain",
+                        "Arun varma"),
+                    createcard(
+                        "https://th.bing.com/th/id/OIP.voVb4NaGSepTyJ5vdixyEAHaE8?rs=1&pid=ImgDetMain",
+                        "Janu varma"),
+                    createcard(
+                        "https://th.bing.com/th/id/OIP.voVb4NaGSepTyJ5vdixyEAHaE8?rs=1&pid=ImgDetMain",
+                        "Varun varma"),
+                ]);
+            }
+
+            ReactDOM.render(createContainer(), document.getElementById("root"));
+        </script>
+    </body>
+</html>

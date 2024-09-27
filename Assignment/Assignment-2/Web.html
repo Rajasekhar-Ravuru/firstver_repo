@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <link rel="stylesheet" href="web.css">
+    </head>
+    <body>
+        <div class="container"></div>
+        <script>
+            var logoimg = React.createElement("img", {src:"https://th.bing.com/th/id/R.8eb7fcd81adf525052d799fe5f7b532e?rik=44LYIY%2boZZtZIA&riu=http%3a%2f%2fwallsdesk.com%2fwp-content%2fuploads%2f2016%2f10%2fAmazon-Logo.jpg&ehk=JRm0TxpR2W%2fdDKBMoUwQ0s4vXHjYkDSFolaIkefnLV0%3d&risl=&pid=ImgRaw&r=0",
+                width:"100px",
+                heigth:"80px",
+            });
+            var logoDiv = React.createElement("div",null,logoimg)
+
+            var atags = React.createElement("a",null,[
+                React.createElement("a",null,"Home"),
+                React.createElement("a",null,"Electronic"),
+                React.createElement("a",null,"Jewellery"),
+                React.createElement("a",null,"Men"),
+                React.createElement("a",null,"Women"),
+                React.createElement("a",null,"Kids"), 
+            ]);
+            var tagsDiv = React.createElement("div",null,atags);
+
+            var btnname = React.createElement("button",null,"Log Out");
+            var btnDiv = React.createElement("div",null,btnname);
+
+            ReactDOM.render([logoDiv,tagsDiv,btnDiv], document.querySelector(".container"));
+        </script>
+    </body>
+</html>

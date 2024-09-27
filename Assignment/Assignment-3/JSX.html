@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #image_1{
+                color: black;
+                width: 350px;
+                height: 370px;
+                margin-top: 20px;
+            }
+
+            #div_1{
+                border: 2px solid black;
+                text-align: center;
+                width: 400px;
+            
+        }
+        </style>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        
+
+        <script type="text/babel">
+
+            function createJSX(){
+                let div = (<div id="div_1"> 
+
+                <img id="image_1" src="https://www.outstandingcolleges.com/wp-content/uploads/2017/11/Software-Developers.jpg"/>
+
+                <h2> JSX h2 Element </h2>
+
+                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed laudantium natus id nulla tempora, eos odio incidunt cum voluptatum quis.</p>
+
+
+                </div>)
+
+                return div
+               
+            }
+
+            ReactDOM.render(createJSX(), document.getElementById("root"));
+
+            //  let h2 = <h2> JSX h2 Element </h2>;
+
+            //  let p = <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, facere</p>
+
+            //  let img = <img id="image_1" src="https://www.outstandingcolleges.com/wp-content/uploads/2017/11/Software-Developers.jpg"/>
+
+            //  ReactDOM.render([h2,p,img], document.getElementById("root"))
+        </script>
+        
+    </body>
+</html>
